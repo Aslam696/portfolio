@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Angular">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff4d4d"/>
+      <stop offset="1" stop-color="#dd0031"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#g)" d="M64 6 16 23l8 70 40 29 40-29 8-70L64 6z"/>
+  <path fill="#ffffff" d="M64 20 36 92h10l6-15h24l6 15h10L64 20zm8 48H56l8-20 8 20z"/>
+</svg>
+
+

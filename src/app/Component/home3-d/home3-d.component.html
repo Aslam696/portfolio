@@ -1,0 +1,303 @@
+<div class="portfolio-container">
+    <!-- Three.js starfield background -->
+    <div #canvas class="canvas-container" aria-hidden="true"></div>
+
+    <!-- Content Overlay -->
+    <div class="content">
+        <!-- <button #profileBtn class="profile-avatar" type="button" (click)="openProfile()"
+            aria-label="Open profile photo">
+            <img src="/rkepd7bk5m5ecu74zdmp.png" alt="Muhammed Aslam KA" />
+        </button> -->
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Hey, I'm Aslam <br><span class="gradient-text">I'm a Full Stack Web Developer</span></h1>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary" type="button" (click)="scrollToSection('projects')">View Projects</button>
+                    <button class="btn btn-secondary" type="button" (click)="scrollToSection('contact')">Contact Me</button>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!-- Profile Photo Modal -->
+        <div class="profile-popover-root" *ngIf="isProfileOpen" (click)="closeProfile()">
+            <div class="profile-popover-panel" role="dialog" aria-modal="true" [ngStyle]="profilePopoverStyle"
+                (click)="$event.stopPropagation()">
+                <button class="profile-popover-close" type="button" (click)="closeProfile()"
+                    aria-label="Close dialog">×</button>
+                <img class="profile-popover-img" src="/rkepd7bk5m5ecu74zdmp.png" alt="Muhammed Aslam KA" />
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <section class="about">
+            <div class="section-content">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>Full Stack Developer with over 2 years of experience, specializing in Angular, .NET Core,
+                            and SQL Server.</p>
+                        <p>Skilled in developing and maintaining web applications with a focus on clean, efficient,
+                            and scalable solutions.</p>
+                        <p>I also have hands-on experience as a Data Science Intern, with knowledge in Python, data
+                            analysis, and machine learning. Strong problem-solving skills and a passion for learning
+                            new technologies.</p>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <img class="skill-icon-img" src="icons/angular.svg" alt="Angular" loading="lazy" />
+                            </div>
+                            <h3>Angular</h3>
+                            <p>Beautiful interfaces</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <img class="skill-icon-img" src="icons/dotnet.svg" alt="ASP.NET Core" loading="lazy" />
+                            </div>
+                            <h3>ASP.NET Core</h3>
+                            <p>Clean, scalable code</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <img class="skill-icon-img" src="icons/sqlserver.svg" alt="SQL Server" loading="lazy" />
+                            </div>
+                            <h3>SQL Server</h3>
+                            <p>Immersive experiences</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-details">
+                    <h3 class="skills-details-title">Skills</h3>
+                    <div class="skills-details-grid">
+                        <div class="skills-details-card">
+                            <h4>Frontend</h4>
+                            <div class="skills-pills">
+                                <span class="skill-pill">Angular</span>
+                                <span class="skill-pill">HTML</span>
+                                <span class="skill-pill">CSS</span>
+                                <span class="skill-pill">TypeScript</span>
+                                <span class="skill-pill">Reactive Forms</span>
+                                <span class="skill-pill">Angular CLI</span>
+                                <span class="skill-pill">Angular Signals</span>
+                                <span class="skill-pill">API Integration</span>
+                                <span class="skill-pill">Bootstrap</span>
+                                <span class="skill-pill">Angular Material</span>
+                                <span class="skill-pill">Lazy Loading</span>
+                                <span class="skill-pill">Route Guards</span>
+                                <span class="skill-pill">Authentication</span>
+                                <span class="skill-pill">RxJS</span>
+                                <span class="skill-pill">Build &amp; Deployment</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-details-card">
+                            <h4>Backend</h4>
+                            <div class="skills-pills">
+                                <span class="skill-pill">.NET Core</span>
+                                <span class="skill-pill">C#</span>
+                                <span class="skill-pill">ASP.NET Core Web API</span>
+                                <span class="skill-pill">RESTful APIs</span>
+                                <span class="skill-pill">Dependency Injection</span>
+                                <span class="skill-pill">Swagger</span>
+                                <span class="skill-pill">Authentication &amp; Authorization</span>
+                                <span class="skill-pill">Entity Framework Core</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-details-card">
+                            <h4>Database</h4>
+                            <div class="skills-pills">
+                                <span class="skill-pill">SQL Server (T-SQL)</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-details-card">
+                            <h4>Hosting &amp; Deployment</h4>
+                            <div class="skills-pills">
+                                <span class="skill-pill">IIS</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-details-card">
+                            <h4>Tools &amp; IDEs</h4>
+                            <div class="skills-pills">
+                                <span class="skill-pill">Cursor AI</span>
+                                <span class="skill-pill">Visual Studio</span>
+                                <span class="skill-pill">VS Code</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience">
+            <div class="section-content">
+                <h2 class="section-title">Experience</h2>
+
+                <div class="experience-grid">
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <div class="experience-heading">
+                                <h3 class="experience-role">Full Stack Developer</h3>
+                                <p class="experience-meta">Dec 2024 - Present</p>
+                            </div>
+                            <p class="experience-company">Zeta Softwares, Ernakulam</p>
+                        </div>
+                        <ul class="experience-points">
+                            <li>Developed and integrated .NET Core Web APIs with MS SQL Server, ensuring secure and efficient backend functionality.</li>
+                            <li>Built dynamic and responsive frontends using Angular 17 for seamless user experience.</li>
+                            <li>Contributing to projects including  Revenue Management,  Asset Maintenance, and ERP System.</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <div class="experience-heading">
+                                <h3 class="experience-role">Full Stack Developer Intern</h3>
+                                <p class="experience-meta">Sept 2024 - Dec 2024</p>
+                            </div>
+                            <p class="experience-company">Inmakes Infotech, Kochi</p>
+                        </div>
+                        <ul class="experience-points">
+                            <li>Developed and maintained full-stack web applications using the MEAN (MongoDB, Express.js, Angular, Node.js) stack.</li>
+                            <li>Built robust, scalable RESTful APIs using Node.js and Express.js to power dynamic frontend experiences.</li>
+                            <li>Designed and implemented responsive, user-facing interfaces with Angular, focusing on data binding and component-based architecture.</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-card">
+                        <div class="experience-header">
+                            <div class="experience-heading">
+                                <h3 class="experience-role">Data Science Intern</h3>
+                                <p class="experience-meta">Sept 2023 - Feb 2024</p>
+                            </div>
+                            <p class="experience-company">AI Variant, Bangalore</p>
+                        </div>
+                        <ul class="experience-points">
+                            <li>Performed data preprocessing, cleaning, and feature engineering using Python (Pandas, NumPy) to prepare high-quality datasets for analysis and model training.</li>
+                            <li>Applied statistical analysis and machine learning models with Scikit-learn, and created visualizations using Matplotlib and Seaborn to extract and communicate actionable insights.</li>
+                            <li>Collaborated with team members and mentors to refine analytical approaches, completing three project-based engagements with exposure to real-world business problems.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects" id="projects">
+            <div class="section-content">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Crafting enterprise solutions with modern technology</p>
+                
+                <div class="projects-grid-modern">
+                    <div class="project-card-modern" *ngFor="let project of projects; let i = index" 
+                         (click)="openProject(project)">
+                        <!-- Project Preview -->
+                        <div class="project-preview">
+                            <div class="preview-gradient" [style.background]="getProjectGradient(i)"></div>
+                            <img *ngIf="project.images && project.images[0]" 
+                                 [src]="project.images[0]" 
+                                 [alt]="project.title"
+                                 class="preview-image"
+                                 loading="lazy" />
+                            <div class="preview-overlay">
+                                <span class="view-details-btn">View Details →</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Project Info -->
+                        <div class="project-info">
+                            <span class="project-status" *ngIf="project.duration">{{ project.duration }}</span>
+                            <h3 class="project-name">{{ project.title }}</h3>
+                            <p class="project-brief">{{ project.summary }}</p>
+                            
+                            <div class="project-tech">
+                                <span class="tech-badge" *ngFor="let tech of project.tech">{{ tech }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Details Modal -->
+            <div class="modal-root" *ngIf="activeProject as p" (click)="closeProject()">
+                <div class="modal-backdrop"></div>
+                <div class="modal-panel" role="dialog" aria-modal="true" (click)="$event.stopPropagation()">
+                    <div class="modal-header">
+                        <div class="modal-heading">
+                            <h3 class="modal-title">{{ p.title }}</h3>
+                            <p class="modal-subtitle" *ngIf="p.duration">{{ p.duration }}</p>
+                        </div>
+                        <button class="modal-close" type="button" (click)="closeProject()"
+                            aria-label="Close dialog">
+                            ×
+                        </button>
+                    </div>
+
+                    <p class="modal-summary">{{ p.summary }}</p>
+
+                    <!-- Project Images Gallery -->
+                    <div class="modal-images" *ngIf="p.images && p.images.length > 0">
+                        <div class="project-image-item" *ngFor="let img of p.images; let i = index" (click)="openImageLightbox(img)">
+                            <div class="image-overlay">
+                                <span class="image-label">{{ i === 0 ? 'Login Page' : 'Listing Page' }}</span>
+                                <span class="zoom-hint">Click to zoom</span>
+                            </div>
+                            <img [src]="img" [alt]="p.title + ' screenshot'" loading="lazy" />
+                        </div>
+                    </div>
+
+                    <ul class="modal-points">
+                        <li *ngFor="let point of p.points">{{ point }}</li>
+                    </ul>
+
+                    <div class="tech-tags modal-tech">
+                        <span class="tag" *ngFor="let tech of p.tech">{{ tech }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Lightbox -->
+            <div class="lightbox-root" *ngIf="lightboxImage" (click)="closeImageLightbox()">
+                <div class="lightbox-backdrop"></div>
+                <div class="lightbox-content" (click)="$event.stopPropagation()">
+                    <button class="lightbox-close" type="button" (click)="closeImageLightbox()" aria-label="Close lightbox">
+                        ×
+                    </button>
+                    <img [src]="lightboxImage" alt="Project screenshot" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="section-content">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="contact-text">Interested in working together? Let's create something amazing!</p>
+                <div class="contact-links">
+                    <a href="mailto:aslamkamuhammed@gmail.com" class="contact-link">
+                        <span class="link-icon">📧</span>
+                        <span>Email</span>
+                    </a>
+                    <a href="tel:+919074401845" class="contact-link">
+                        <span class="link-icon">📱</span>
+                        <span>Phone</span>
+                    </a>
+                    <a href="https://github.com/Aslam696" class="contact-link" target="_blank"
+                        rel="noopener noreferrer">
+                        <span class="link-icon">🐙</span>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

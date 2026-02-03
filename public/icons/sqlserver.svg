@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="SQL Server">
+  <defs>
+    <linearGradient id="steel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e5e7eb"/>
+      <stop offset="1" stop-color="#9ca3af"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ef4444"/>
+      <stop offset="1" stop-color="#b91c1c"/>
+    </linearGradient>
+  </defs>
+  <!-- database cylinder -->
+  <ellipse cx="64" cy="34" rx="40" ry="16" fill="url(#steel)"/>
+  <path d="M24 34v44c0 9 18 16 40 16s40-7 40-16V34" fill="url(#steel)"/>
+  <ellipse cx="64" cy="78" rx="40" ry="16" fill="#9ca3af" opacity="0.55"/>
+  <!-- accent band -->
+  <path d="M24 52c0 9 18 16 40 16s40-7 40-16" fill="none" stroke="url(#accent)" stroke-width="8" stroke-linecap="round"/>
+  <!-- label -->
+  <text x="64" y="112" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" fill="#ffffff">SQL</text>
+</svg>
+
+
